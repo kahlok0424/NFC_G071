@@ -15,6 +15,7 @@
 "Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.o"
 "Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart.o"
 "Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_uart_ex.o"
+"Inc/nfc.o"
 "Src/main.o"
 "Src/stm32g0xx_hal_msp.o"
 "Src/stm32g0xx_it.o"

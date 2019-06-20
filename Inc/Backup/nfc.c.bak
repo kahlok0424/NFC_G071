@@ -1,0 +1,12 @@
+/*
+ * nfc.c
+ *
+ *  Created on: Jun 20, 2019
+ *      Author: kahlok
+ */
+
+#include "nfc.h"
+#include "main.h"
+
+void initNFC()
+

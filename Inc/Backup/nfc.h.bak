@@ -1,0 +1,15 @@
+/*
+ * nfc.h
+ *
+ *  Created on: Jun 20, 2019
+ *      Author: user
+ */
+
+#ifndef NFC_H_
+#define NFC_H_
+
+#define NFC_LED1
+#define NFC_LED2
+#define NFC_LED3
+
+#endif /* NFC_H_ */

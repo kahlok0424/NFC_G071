@@ -43,7 +43,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdint.h"
+#include "nfc.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -122,6 +123,10 @@ int main(void)
   buffer[3]= 0x44;
   buffer[4]= 0x55;
   buffer[5]= 0x66;
+
+  initNFC(&hi2c1, (NFC_UserMemory));
+  //HAL_I2C_Master_Transmit(&hi2c1, (NFC_UserMemory), buffer, 5,10);
+  HAL_I2C_Mem_Write(&hi2c1,NFC_UserMemory,0x1A,0x04,buffer,5,50);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -131,9 +136,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  HAL_I2C_Master_Transmit(&hi2c1, (0x53<<1), buffer, 5,10);
 	  HAL_Delay(50);
-	  HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
+	  //HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
   }
   /* USER CODE END 3 */
 }
@@ -293,14 +297,24 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_Pin|NFC_LED3_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : LED_Pin */
-  GPIO_InitStruct.Pin = LED_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, NFC_LED1_Pin|NFC_LED2_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : LED_Pin NFC_LED3_Pin */
+  GPIO_InitStruct.Pin = LED_Pin|NFC_LED3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : NFC_LED1_Pin NFC_LED2_Pin */
+  GPIO_InitStruct.Pin = NFC_LED1_Pin|NFC_LED2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
 

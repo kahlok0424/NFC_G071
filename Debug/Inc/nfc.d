@@ -1,5 +1,4 @@
-Src/main.o: ../Src/main.c \
- C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Inc/main.h \
+Inc/nfc.o: ../Inc/nfc.c ../Inc/nfc.h ../Inc/main.h \
  C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Inc/stm32g0xx_hal_conf.h \
  C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -26,11 +25,11 @@ Src/main.o: ../Src/main.c \
  C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_pwr_ex.h \
  C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h \
  C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
- C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Inc/nfc.h \
- C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Inc/main.h \
  C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h
 
-C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Inc/main.h:
+../Inc/nfc.h:
+
+../Inc/main.h:
 
 C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 
@@ -83,9 +82,5 @@ C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver
 C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h:
 
 C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h:
-
-C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Inc/nfc.h:
-
-C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Inc/main.h:
 
 C:/Ac6/SystemWorkbench/StudentWorkSpace/KL/NFC_G071/Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h:
